@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "f222d545-c232-4436-ab4e-e68df03c3a75",
+		"name": "Event management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36540827"
+	},
+	"item": [
+		{
+			"name": "Get All Events",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eventName\": \"Tech Conference 2024\",\r\n    \"eventDate\": \"2024-07-15T09:00:00Z\",\r\n    \"organizer\": \"John Doe\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"phone\": \"+1234567890\",\r\n    \"location\": {\r\n        \"street\": \"123 Tech Avenue\",\r\n        \"city\": \"San Francisco\",\r\n        \"state\": \"CA\",\r\n        \"zip\": \"94103\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Event by ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Event by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/event/667aa7149283abe75e03b949",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event",
+						"667aa7149283abe75e03b949"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Event",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"667aa7149283abe75e03b949\",\r\n    \"eventName\": \"Tech Conference 2024\",\r\n    \"eventDate\": \"2024-07-15T09:00:00Z\",\r\n    \"organizer\": \"Amit gautam\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"phone\": \"+1234567890\",\r\n    \"location\": {\r\n        \"street\": \"123 Tech Avenue\",\r\n        \"city\": \"San Francisco\",\r\n        \"state\": \"CA\",\r\n        \"zip\": \"94103\"\r\n    },\r\n    \"createdAt\": \"2024-06-25T11:16:36.093Z\",\r\n    \"updatedAt\": \"2024-06-25T11:16:36.093Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/event/667aa7149283abe75e03b949",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event",
+						"667aa7149283abe75e03b949"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
